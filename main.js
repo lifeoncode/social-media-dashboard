@@ -20,7 +20,7 @@ function init(e){
     })
 
     youtube.addEventListener('click', (e) => {
-        window.open('https://youtube.com/devspace');
+        window.open('https://www.youtube.com/channel/UCbseQCLNG53nzB2qY_0thYw?view_as=subscriber');
     })
     
 
