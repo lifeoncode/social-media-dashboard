@@ -52,7 +52,6 @@
 
 body{
     font-family: 'Inter', sans-serif;
-    overflow: hidden;
     position: relative;
 }
 
@@ -370,9 +369,6 @@ input:checked + .slider:before {
 
 @media screen and (max-width: 768px){
 
-    body{
-        overflow: scroll;
-    }
 
     .overlay{
         height: 45vh;
