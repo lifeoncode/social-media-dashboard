@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+
+
+*, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/* colors */
+:root{
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+    --facebook-color: hsl(195, 100%, 50%);
+    --twitter-color: hsl(203, 89%, 53%);
+    --instagram-color: linear-gradient(135deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --youtube-color: hsl(348, 97%, 39%);
+
+    /* Themes */
+
+    /* Dark */
+    --dark-theme: linear-gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+    --bg-blue: hsl(230, 17%, 14%);
+    --top-bg-blue: hsl(232, 19%, 15%);
+    --card-bg-blue: hsl(228, 28%, 20%);
+    --txt-blue: hsl(228, 34%, 66%);
+    --txt-white: hsl(0, 0%, 100%);
+
+    /* Light */
+    --light-theme: hsl(230, 22%, 74%);
+    --bg-white: hsl(0, 0%, 100%);
+    --pale-top-bg-blue: hsl(225, 100%, 98%);
+    --light-card-bg-blue: hsl(227, 47%, 96%);
+    --txt-gray-blue: hsl(228, 12%, 44%);
+    --txt-dark-blue: hsl(230, 17%, 14%);
+}
+
+
+
+
+
+
+
+
+body{
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    background-color: var(--pale-top-bg-blue);
+}
+
+
+
+header{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    padding: 1rem 0 2rem 0;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+header h1{
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--txt-dark-blue);
+}
+
+header p{
+    font-size: 0.9rem;
+    color: var(--txt-gray-blue);
+    font-weight: 700;
+}
+
+header > div + div{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--txt-gray-blue);
+    font-size: 0.8rem;
+}
+
+
+
+main{
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.networks{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0 2rem;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+
+.facebook,
+.twitter,
+.instagram, 
+.youtube{
+    background-color: var(--light-card-bg-blue);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+
+
+.facebook{
+    border-top: 4px solid var(--facebook-color);
+}
+.twitter{
+    border-top: 4px solid var(--twitter-color);
+}
+.instagram{
+    border-top: 4px solid rgb(255, 0, 149);
+}
+.youtube{
+    border-top: 4px solid var(--youtube-color);
+}
+
+.net_header,
+.net_bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.net_header span{
+    font-size: 0.7rem;
+    color: var(--txt-dark-blue);
+    margin-left: 1rem;
+    font-weight: 600;
+}
+
+.net_follow{
+    padding: 1.5rem 0;
+}
+
+.net_follow h2{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--txt-dark-blue);
+}
+
+.net_follow p{
+    font-size: 0.8rem;
+    color: var(--txt-gray-blue);
+    letter-spacing: 2px;
+}
+
+.net_bottom span{
+    font-size: 0.7rem;
+    color: var(--lime-green);
+    margin-left: 0.5rem;
+}
+
+.down{
+    color: var(--bright-red) !important;
+}
+
+
+
+
+
+
+.stats{
+    width: 80%;
+    margin: auto;
+    padding: 2.5rem 0;
+}
+
+.stats h1{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--txt-gray-blue);
+}
+
+.stats_cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;    
+}
+
+.card{
+    border-radius: 0.5rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: var(--light-card-bg-blue);
+    cursor: pointer;
+    position: relative;
+}
+
+.card h3{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--txt-gray-blue);
+}
+
+.card h2{
+    font-size: 1.4rem;
+    color: var(--txt-dark-blue);
+}
+
+.card > div + div{
+    text-align: center;
+}
+
+.card .net_bottom{
+    margin-top: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* toggle */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 58px;
+    height: 28px;
+    margin-left: 1rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--light-theme);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+
+input:checked + .slider {
+    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Toggle theme */
+
+.dark{
+    background: var(--bg-blue);
+}
+
+.dark_card{
+    background-color: var(--card-bg-blue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+    .overlay{
+        height: 16vh;
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px){
+
+    body{
+        overflow: scroll;
+    }
+
+    .overlay{
+        height: 45vh;
+    }
+
+    header{
+        text-align: center;
+        grid-template-columns: none;
+        grid-gap: 2rem 0;
+    }
+    
+    header > div + div{
+        justify-content: center;
+    }
+
+
+    .networks, 
+    .stats_cards{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 620px){
+
+
+    header{
+        padding: 2rem 0 4rem 0;
+    }
+    
+
+    .networks, 
+    .stats_cards{
+        grid-template-columns: none;
+        grid-gap: 2.5rem 0;
+    }
+ 
+    .stats{
+        padding: 4rem 0;
+    }
+    
+    
+}
