@@ -80,13 +80,13 @@ function init(e){
 
             document.querySelector('header span').style.color = 'var(--txt-blue)';
             
-        }, 400);
+        }, 100);
 
 
         setTimeout(() => {
             toggle.removeEventListener('click', darkMode);
             toggle.addEventListener('click', lightMode);
-        }, 1000);
+        }, 110);
     }
     
 
@@ -138,7 +138,7 @@ function init(e){
             document.querySelector('header span').style.color = 'var(--txt-gray-blue)';
 
     
-        }, 400);
+        }, 100);
 
 
 
@@ -146,7 +146,7 @@ function init(e){
         setTimeout(() => {
             toggle.removeEventListener('click', lightMode);
             toggle.addEventListener('click', darkMode);
-        }, 1000);
+        }, 110);
     }
     
     
