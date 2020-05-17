@@ -402,7 +402,7 @@ input:checked + .slider:before {
 @media screen and (max-width: 620px){
 
 .overlay{
-height: 50vh;
+height: 55vh;
 }
 
     header{
