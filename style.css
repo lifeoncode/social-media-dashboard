@@ -401,6 +401,9 @@ input:checked + .slider:before {
 
 @media screen and (max-width: 620px){
 
+.overlay{
+height: 50vh;
+}
 
     header{
         padding: 2rem 0 4rem 0;
